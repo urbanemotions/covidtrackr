@@ -18,6 +18,6 @@ u2 = User.create(name: "Sin", age: 20, sex: "F")
 
 l1 = Location.create(location: "New York")
 
-i1 = Illnesses.create(illness: )
+i1 = Illness.create(covid: "covid")
 
 

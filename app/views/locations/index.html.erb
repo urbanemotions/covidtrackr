@@ -1,5 +1,5 @@
-<h1> All Locations: </h1>
+<h1> All locations: </h1>
 
-<% @locations.each do |l| %>
-<li> <%= link_to l.location, location_path(l) %> </li>
+<% @locations.each do |f| %>
+    <li> <%= link_to f.location, location_path(f) %> </li>
 <% end %>
