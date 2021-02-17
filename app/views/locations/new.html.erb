@@ -1,0 +1,19 @@
+<h1> Locations visited </h1>
+
+<%= form_for @location do |f| %> 
+    <% if @location.errors.any? %>
+        <ul>
+            <% @location.errors.full_messages.each do |msg| %>
+                <li> <%= msg %> </li>
+            <% end %>
+        </ul>
+    <% end %>
+    <ul> 
+        <li>
+            <%= f.label :location %>
+            <%= f.text_field :location %>
+        </li>
+        <br>
+        <%= f.submit %>
+    </ul>
+<% end %>

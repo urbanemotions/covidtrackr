@@ -1,0 +1,29 @@
+<h1> Signed up as a User </h1>
+
+<%= form_for @user do |f| %> 
+    <% if @user.errors.any? %>
+        <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li> <%= msg %> </li>
+            <% end %>
+        </ul>
+    <% end %>
+    <ul> 
+        <li>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </li>
+        <br>
+        <li>
+            <%= f.label :age %>
+            <%= f.text_field :age %>
+        </li>
+         <br>
+        <li>
+            <%= f.label :sex %>
+            <%= f.text_field :sex %>
+        </li>
+         <br>
+        <%= f.submit %>
+    </ul>
+<% end %>

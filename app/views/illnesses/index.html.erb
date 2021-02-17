@@ -1,0 +1,5 @@
+<h1> Illnesses: </h1>
+
+<% @illnesses.each do |i| %>
+    <li> <%= link_to i.illness, illness_path(i) %> </li>
+<% end %>
