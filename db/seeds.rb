@@ -30,23 +30,23 @@ u3 = User.create(name: "Jean", age: 42, sex: "M")
 u4 = User.create(name: "Deirdre", age: 35, sex: "F")
 u5 = User.create(name: "Bri", age: 36, sex: "M")
 
-s1 = Symptom.create(name: COVID_SYMPTOMS[1])
-s2 = Symptom.create(name: "Sore throat")
-s3 = Symptom.create(name: "New loss of taste or smell")
-s4 = Symptom.create(name: "Vomiting or diarrhea")
-s5 = Symptom.create(name: "Fever or feeling feverish (such as chills, sweating)")
-
 i1 = Illness.create(name: "Positive")
 i2 = Illness.create(name: "Negative")
 i3 = Illness.create(name: "Positive")
 i4 = Illness.create(name: "Positive")
-i4 = Illness.create(name: "Positive")
+i5 = Illness.create(name: "Positive")
 
-l1 = Location.create(name: CITY[2])
-l2 = Location.create(name: CITY[1])
-l3 = Location.create(name: CITY[0])
-l4 = Location.create(name: CITY[0])
-l5 = Location.create(name: CITY[4])
+s1 = Symptom.create(name: "Cough", user_id: u1.id, illness_id: i1.id)
+s2 = Symptom.create(name: "Sore throat", user_id: u2.id, illness_id: i2.id)
+s3 = Symptom.create(name: "New loss of taste or smell", user_id: u3.id, illness_id: i3.id)
+s4 = Symptom.create(name: "Vomiting or diarrhea", user_id: u4.id, illness_id: i4.id)
+s5 = Symptom.create(name: "Fever or feeling feverish (such as chills, sweating)", user_id: u5.id, illness_id: i5.id)
+
+l1 = Location.create(name: "New York")
+l2 = Location.create(name: "San Francisco")
+l3 = Location.create(name: "Seattle")
+l4 = Location.create(name: "Seattle")
+l5 = Location.create(name: "Miami")
 
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT

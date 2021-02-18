@@ -1,6 +1,5 @@
 class Treatment < ApplicationRecord
     
-    belongs_to :user
     belongs_to :illness
 
     COVID_TREATMENTS = ["Self care", 
