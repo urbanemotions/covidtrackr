@@ -17,7 +17,7 @@ class LocationsController < ApplicationController
     def create
         @location = Location.new(city_params)
         if @location.save
-            redirect_to @location #.user?
+            redirect_to @location
         else
             render :new
         end
@@ -28,7 +28,7 @@ class LocationsController < ApplicationController
 
     def update 
         if @location.update(city_params)
-            redirect_to @location #.user?
+            redirect_to @location
         else
             render :edit 
         end
@@ -48,7 +48,6 @@ class LocationsController < ApplicationController
     def city_params 
         params.require(:location).permit(:name, :illness_id)
         # params.require(:location).permit(:name, :city, :user_id)
-        #params.require(:location).permit(:location)
     end
     
 end

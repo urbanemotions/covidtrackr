@@ -40,6 +40,7 @@ class IllnessesController < ApplicationController
     # end
 
     private
+    
     def illness_params
         params.require(:illness).permit(:name, :user_id, :illness_id)
     end
