@@ -42,11 +42,11 @@ i3 = Illness.create(name: "Positive")
 i4 = Illness.create(name: "Positive")
 i4 = Illness.create(name: "Positive")
 
-l1 = Location.create(name: "New York")
-l2 = Location.create(name: "San Francisco")
-l3 = Location.create(name: "Seattle")
-l4 = Location.create(name: "Seattle")
-l5 = Location.create(name: "Los Angeles")
+l1 = Location.create(name: CITY[2])
+l2 = Location.create(name: CITY[1])
+l3 = Location.create(name: CITY[0])
+l4 = Location.create(name: CITY[0])
+l5 = Location.create(name: CITY[4])
 
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT
