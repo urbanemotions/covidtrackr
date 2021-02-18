@@ -28,16 +28,16 @@ class IllnessesController < ApplicationController
     end
 # i am confusing myself... 
 # when covidsymptoms are selected in the drop down menu, then 
-    def covid?
-        case x
-        when @symptom != nil    
-            "true"
-        else 
-            "false"
-        end
-        # if covidsymptom is = covid then illness of covid is true 
-        # come back
-    end
+    # def covid?
+    #     case x
+    #     when @symptom != nil    
+    #         "true"
+    #     else 
+    #         "false"
+    #     end
+    #     # if covidsymptom is = covid then illness of covid is true 
+    #     # come back
+    # end
 
     private
     def illness_params
