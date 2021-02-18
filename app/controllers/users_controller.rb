@@ -24,10 +24,10 @@ class UsersController < ApplicationController
         end
     end
 
-    # ability to delete a user - if user changed its mind and realize they dont have any symptoms 
+    # ability to delete a user - if user changed its mind and realize they dont have any covidsymptoms 
     # def destroy
     #     @user.destroy
-    #     redirect_to symptoms_path
+    #     redirect_to covidsymptoms_path
     # end
 
     

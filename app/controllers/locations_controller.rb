@@ -11,13 +11,13 @@ class LocationsController < ApplicationController
     end
 
     def new
-        @location = Location.new 
+        @citylocation = Location.new 
     end
 
     def create
-        @location = Location.new(city_params)
-        if @location.save
-            redirect_to @location
+        @citylocation = Location.new(city_params)
+        if @citylocation.save
+            redirect_to @citylocation #.user?
         else
             render :new
         end
@@ -28,26 +28,26 @@ class LocationsController < ApplicationController
     end
 
     def update 
-        if @location.update(city_params)
-            redirect_to @location
+        if @citylocation.update(city_params)
+            redirect_to @citylocation #.user?
         else
             render :edit 
         end
     end
 
     def destroy
-        @location.destroy
-        redirect_to locations_path
+        @citylocation.destroy
+        redirect_to citylocations_path
     end
 
     private 
 
     def get_location
-        @location = Location.find(params[:id])
+        @citylocation = Location.find(params[:id])
     end
 
     def city_params 
-        # params.require(:location).permit(:location, :city)
-        params.require(:location).permit(:location)
+        params.require(:location).permit(:citylocation, :city, :user_id)
+        #params.require(:location).permit(:location)
     end
 end

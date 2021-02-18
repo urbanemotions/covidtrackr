@@ -1,19 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-CITY = ["Seattle", "San Francisco", "New York", "Los Angeles", "Miami"]
-COVID_SYMPTOMS = ["Fever or feeling feverish (such as chills, sweating)", "Cough", "Mild or moderate difficulty breathing", "Sore throat", "Muscle aches or body aches", "Vomiting or diarrhea", "New loss of taste or smell", "Congestion or runny nose"]
-COVID_TREATMENTS = ["Self care", "Medical care"]
-MEDICAL_CARE_TREATMENTS = ["Antiviral drug (remdesivir)", "Hospitalized", "Oxygen therapy"]
-SELF_CARE_TREATMENTS = ["Stay home", "Over-the-counter medicines (acetaminophen)"]
+COVID_SYMPTOMS = ["Fever or feeling feverish (such as chills, sweating)", 
+                  "Cough", 
+                  "Mild or moderate difficulty breathing", 
+                  "Sore throat", 
+                  "Muscle aches or body aches", 
+                  "Vomiting or diarrhea", 
+                  "New loss of taste or smell", 
+                  "Congestion or runny nose"]
+COVID_TREATMENTS = ["Self care", 
+                    "Medical care"]
+MEDICAL_CARE_TREATMENTS = ["Antiviral drug (remdesivir)", 
+                           "Hospitalized", 
+                           "Oxygen therapy"]
+SELF_CARE_TREATMENTS = ["Stay home", 
+                        "Over-the-counter medicines (acetaminophen)"]
 # treatment can be self care stay home, meds, medical - antiviral drug
 # drop down to select self care or medical assistants
+
+CITY = ["Seattle", 
+    "San Francisco", 
+    "New York", 
+    "Los Angeles", 
+    "Miami"]
 
 u1 = User.create(name: "Irvin", age: 25, sex: "M")
 u2 = User.create(name: "Sin", age: 20, sex: "F")
