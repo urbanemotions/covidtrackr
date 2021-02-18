@@ -16,7 +16,7 @@ class IllnessesController < ApplicationController
     def create 
         @illness = Illness.new(illness_params)
         if @illness.save
-            redirect_to @illness.user
+            redirect_to @illness
         else
             render :new
         end
@@ -24,7 +24,7 @@ class IllnessesController < ApplicationController
 # if the user input the wrong thing, allow them to delete it
     def destroy 
         @illness.destroy 
-        redirect_to @illness.user
+        redirect_to @illness
     end
 # i am confusing myself... 
 # when symptoms are selected in the drop down menu, then 
