@@ -1,9 +1,9 @@
 <h1> Symptoms </h1>
 
-<%= form_for @covidsymptom do |f| %> 
-    <% if @covidsymptom.errors.any? %>
+<%= form_for @symptom do |f| %> 
+    <% if @symptom.errors.any? %>
         <ul>
-            <% @covidsymptom.errors.full_messages.each do |msg| %>
+            <% @symptom.errors.full_messages.each do |msg| %>
                 <li> <%= msg %> </li>
             <% end %>
         </ul>
@@ -16,7 +16,7 @@
         <br>
         <li>
             <%= f.label :symptom %>
-            <%= f.collection_select :symptom_id, @symptoms, :id, :covidsymptom %>
+            <%= f.collection_select :symptom_id, @symptoms, :id, :name %>
         </li>
         <br>
         <%= f.submit %>

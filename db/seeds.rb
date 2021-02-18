@@ -22,7 +22,7 @@ CITY = ["Seattle",
     "San Francisco", 
     "New York", 
     "Los Angeles", 
-    "Miami"]
+    "Miami"]    
 
 u1 = User.create(name: "Irvin", age: 25, sex: "M")
 u2 = User.create(name: "Sin", age: 20, sex: "F")

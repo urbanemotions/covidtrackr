@@ -1,5 +1,7 @@
 <h1> Illnesses: </h1>
 
-<% @illnesses.each do |f| %>
-    <li> <%= link_to f.covid, illness_path(f) %> </li>
-<% end %>
+<h1> 
+    <%= @illnesses.each do |f| %>
+        <li> <%= link_to f.name, illness_path(f) %> </li>
+    <% end %>
+</h1>

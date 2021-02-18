@@ -12,7 +12,7 @@ class Symptom < ApplicationRecord
                     "New loss of taste or smell", 
                     "Congestion or runny nose"]
   
-  validates :covidsymptom, presence: true 
+  validates :symptom, presence: true 
   validates :covid_symptoms, inclusion: {in: COVID_SYMPTOMS}
 
 end
