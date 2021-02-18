@@ -51,7 +51,7 @@ l5 = Location.create(name: "Los Angeles")
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT
 t1 = Treatment.create(name: "Self care")
-t2 = Treatment.create(name: "") #covid negative so dont need treatment 
+t2 = Treatment.create(name: " ") #covid negative so dont need treatment 
 t3 = Treatment.create(name: "Medical care")
 t4 = Treatment.create(name: "Medical care")
 t5 = Treatment.create(name: "Self care")

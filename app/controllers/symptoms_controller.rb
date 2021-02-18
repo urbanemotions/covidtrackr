@@ -3,9 +3,10 @@ class SymptomsController < ApplicationController
     before_action :set_users, only: [:new, :create, :edit, :update]
 
     def new
-        @symptom = Symptom.new 
         @illnesses = Illness.all 
         @users = User.all 
+        @symptom = Symptom.new 
+        
     end
 
     def create
