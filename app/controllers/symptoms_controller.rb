@@ -11,10 +11,9 @@ class SymptomsController < ApplicationController
     end
 
     def new
-        @illnesses = Illness.all 
-        @users = User.all 
         @symptom = Symptom.new 
-        
+        # @illnesses = Illness.all 
+        # @users = User.all 
     end
 
     def create

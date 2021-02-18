@@ -30,7 +30,7 @@ u3 = User.create(name: "Jean", age: 42, sex: "M")
 u4 = User.create(name: "Deirdre", age: 35, sex: "F")
 u5 = User.create(name: "Bri", age: 36, sex: "M")
 
-s1 = Symptom.create(name: "Cough")
+s1 = Symptom.create(name: COVID_SYMPTOMS[1])
 s2 = Symptom.create(name: "Sore throat")
 s3 = Symptom.create(name: "New loss of taste or smell")
 s4 = Symptom.create(name: "Vomiting or diarrhea")
@@ -51,7 +51,7 @@ l5 = Location.create(name: CITY[4])
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT
 t1 = Treatment.create(name: "Self care")
-t2 = Treatment.create(name: " ") #covid negative so dont need treatment 
+t2 = Treatment.create(name: "") #covid negative so dont need treatment 
 t3 = Treatment.create(name: "Medical care")
 t4 = Treatment.create(name: "Medical care")
 t5 = Treatment.create(name: "Self care")
