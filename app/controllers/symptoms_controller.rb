@@ -51,7 +51,7 @@ class SymptomsController < ApplicationController
     end
 
     def s_params
-        params.require(:symptom).permit(:symptom, COVID_SYMPTOMS, :user_id, :illness_id)
+        params.require(:symptom).permit(:name, covid_symptoms, :user_id, :illness_id)
     end
 
     def set_users
