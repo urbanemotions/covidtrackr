@@ -12,15 +12,15 @@ class SymptomsController < ApplicationController
 
     def new
         @symptom = Symptom.new 
-        # @illnesses = Illness.all 
-        # @users = User.all 
+        @illnesses = Illness.all 
+        @users = User.all 
     end
 
     def create
         @symptom = Symptom.new(s_params)
         if @symptom.save
             #redirect_to symptom_path(@symptom)
-            redirect_to @symptom_path
+            redirect_to @symptom
         else
             render :new 
         end

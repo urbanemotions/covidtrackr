@@ -15,8 +15,8 @@
         </li>
         <br>
         <li>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
+            <%= f.label :illness %>
+            <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
         </li>
         <br>
         <%= f.submit %>

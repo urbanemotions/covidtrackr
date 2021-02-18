@@ -14,7 +14,7 @@ class TreatmentsController < ApplicationController
     def create 
         @treatment = Treatment.new(t_params)
         if @treatment.save
-            redirect_to @treatment #.user?
+            redirect_to @treatment
         else
             render :new
         end
@@ -25,7 +25,7 @@ class TreatmentsController < ApplicationController
 
     def update 
         if @treatmemt.update(t_params)
-            redirect_to @treatment #.user?
+            redirect_to @treatment
         else
             render :edit 
         end
@@ -39,7 +39,6 @@ class TreatmentsController < ApplicationController
 
     def t_params 
         params.require(:treatment).permit(:name, :illness_id)
-        #params.require(:location).permit(:location)
     end
 
 end
