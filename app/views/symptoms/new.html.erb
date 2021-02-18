@@ -11,12 +11,12 @@
     <ul> 
         <li>
             <%= f.label :user %>
-            <%= f.collection_select :user_id, @users, :id, :name %>
+            <%= f.collection_select(:user_id, @users, :id, :name) %>
         </li>
         <br>
         <li>
             <%= f.label :symptom %>
-            <%= f.collection_select :symptom_id, @symptoms, :id, :name %>
+            <%= f.collection_select(:symptom_id, @symptoms, :id, :name) %>
         </li>
         <br>
         <%= f.submit %>
