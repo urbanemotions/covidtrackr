@@ -1,9 +1,9 @@
 <h1> Symptoms </h1>
 
-<%= form_for @symptom do |f| %> 
-    <% if @symptom.errors.any? %>
+<%= form_for @covidsymptom do |f| %> 
+    <% if @covidsymptom.errors.any? %>
         <ul>
-            <% @symptom.errors.full_messages.each do |msg| %>
+            <% @covidsymptom.errors.full_messages.each do |msg| %>
                 <li> <%= msg %> </li>
             <% end %>
         </ul>
