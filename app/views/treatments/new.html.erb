@@ -1,0 +1,25 @@
+<h1> Treatments </h1>
+<h1>
+<%= form_for @treatment do |f| %> 
+    <% if @treatment.errors.any? %>
+        <ul>
+            <% @treatment.errors.full_messages.each do |msg| %>
+                <li> <%= msg %> </li>
+            <% end %>
+        </ul>
+    <% end %>
+    <ul> 
+        <li>
+            <%= f.label :user %>
+            <%= f.collection_select(:user_id, @users, :id, :name) %>
+        </li>
+        <br>
+        <li>
+            <%= f.label :treatment%>
+            <%= f.collection_select(:treatment_id, @treatments) %>
+        </li>
+        <br>
+        <%= f.submit %>
+    </ul>
+<% end %>
+</h1> 

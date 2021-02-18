@@ -11,6 +11,7 @@ class IllnessesController < ApplicationController
     end
     
     def show   
+        
     end
     
     def create 

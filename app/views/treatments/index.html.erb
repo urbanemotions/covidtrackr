@@ -1,0 +1,7 @@
+<h1> Treatments: </h1>
+
+<h1> 
+    <%= @treatments.each do |f| %>
+        <li> <%= link_to f.name, treatment_path(f) %> </li>
+    <% end %>
+</h1>
