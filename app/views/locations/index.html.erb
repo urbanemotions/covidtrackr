@@ -1,5 +1,5 @@
 <h1> All locations: </h1>
 
 <% @locations.each do |f| %>
-    <li> <%= link_to f.location, location_path(f) %> </li>
+    <li> <%= link_to f.covidlocation, covidlocation_path(f) %> </li>
 <% end %>
