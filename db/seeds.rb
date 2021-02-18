@@ -43,7 +43,8 @@ l4 = Location.create(citylocation: "Seattle")
 l5 = Location.create(citylocation: "Los Angeles")
 
 # find out how to seed this yes/no, checkbox
-i1 = Illness.create(covid: "covid")
+i1 = Illness.create(covid: "Covid")
+i2 = Illness.create(covid: " ")
 
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT
