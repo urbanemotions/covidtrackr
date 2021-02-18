@@ -13,41 +13,29 @@
 ActiveRecord::Schema.define(version: 2021_02_12_181401) do
 
   create_table "illnesses", force: :cascade do |t|
-    t.boolean "covid"
-    t.integer "user_id", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_illnesses_on_user_id"
   end
 
   create_table "locations", force: :cascade do |t|
-    t.string "citylocation"
-    t.integer "user_id", null: false
-    t.integer "illness_id", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["illness_id"], name: "index_locations_on_illness_id"
-    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
   create_table "symptoms", force: :cascade do |t|
-    t.string "covidsymptom"
-    t.integer "user_id", null: false
-    t.integer "illness_id", null: false
+    t.string "name"
+    t.integer "user_id"
+    t.integer "illness_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["illness_id"], name: "index_symptoms_on_illness_id"
-    t.index ["user_id"], name: "index_symptoms_on_user_id"
   end
 
   create_table "treatments", force: :cascade do |t|
-    t.string "covidtreatment"
-    t.integer "user_id", null: false
-    t.integer "illness_id", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["illness_id"], name: "index_treatments_on_illness_id"
-    t.index ["user_id"], name: "index_treatments_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,11 +46,4 @@ ActiveRecord::Schema.define(version: 2021_02_12_181401) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "illnesses", "users"
-  add_foreign_key "locations", "illnesses"
-  add_foreign_key "locations", "users"
-  add_foreign_key "symptoms", "illnesses"
-  add_foreign_key "symptoms", "users"
-  add_foreign_key "treatments", "illnesses"
-  add_foreign_key "treatments", "users"
 end

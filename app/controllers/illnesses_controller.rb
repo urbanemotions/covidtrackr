@@ -26,22 +26,11 @@ class IllnessesController < ApplicationController
         @illness.destroy 
         redirect_to @illness.user
     end
-# i am confusing myself... 
-# when covidsymptoms are selected in the drop down menu, then 
-    def covid?
-        case x
-        when @covidsymptom != nil    
-            "true"
-        else 
-            "false"
-        end
-        # if covidsymptom is = covid then illness of covid is true 
-        # come back
-    end
 
     private
+
     def illness_params
-        params.require(:illness).permit(:covid, :user_id, :illness_id)
+        params.require(:illness).permit(:name, :user_id, :illness_id)
     end
 
     def find_illness 

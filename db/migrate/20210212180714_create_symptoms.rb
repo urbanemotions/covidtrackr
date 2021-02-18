@@ -1,10 +1,9 @@
 class CreateSymptoms < ActiveRecord::Migration[6.1]
   def change
     create_table :symptoms do |t|
-      t.string :covidsymptom
-      t.references :user, null: false, foreign_key: true
-      t.references :illness, null: false, foreign_key: true
-
+      t.string :name
+      t.integer :user_id
+      t.integer :illness_id
       t.timestamps
     end
   end

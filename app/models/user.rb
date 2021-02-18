@@ -6,7 +6,7 @@ class User < ApplicationRecord
     has_many :treatments, through: :illnesses
 
     validates :name, length: {minimum: 2}
-    validates :age, length: {minimum: 3}
+    validates :age, length: {maximum: 3}
     validates :sex, length: {maximum: 1}
 
 end

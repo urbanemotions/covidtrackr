@@ -1,17 +1,17 @@
 class SymptomsController < ApplicationController
-    before_action :get_symptom, only: [:show:edit, :update, :destroy]
+    before_action :get_symptom, only: [:show, :edit, :update, :destroy]
     before_action :set_users, only: [:new, :create, :edit, :update]
 
     def new
-        @covidsymptom = Symptom.new 
+        @symptom = Symptom.new 
         @illnesses = Illness.all 
         @users = User.all 
     end
 
     def create
-        @covidsymptom = Symptom.new(s_params)
-        if @covidsymptom.save
-            redirect_to @symptom_path
+        @symptom = Symptom.new(s_params)
+        if @symptom.save
+            redirect_to @symptom
         else
             render :new 
         end
@@ -22,8 +22,8 @@ class SymptomsController < ApplicationController
     end
 
     def update 
-        if @covidsymptom.update(s_params)
-            redirect_to @covidsymptom
+        if @symptom.update(s_params)
+            redirect_to @symptom
         else
             render :edit
         end
@@ -31,8 +31,8 @@ class SymptomsController < ApplicationController
     end
 
     def destroy
-        @covidsymptom.destroy
-        redirect_to covidsymptom_path
+        @symptom.destroy
+        redirect_to symptom_path
     end
 
     def show 
@@ -47,11 +47,11 @@ class SymptomsController < ApplicationController
     private
 
     def get_symptom
-        @covidsymptom = Symptom.find(params[:id])
+        @symptom = Symptom.find(params[:id])
     end
 
     def s_params
-        params.require(:symptom).permit(:covidsymptom, COVID_SYMPTOMS, :user_id, :illness_id)
+        params.require(:symptom).permit(:name, :user_id, :illness_id)
     end
 
     def set_users
