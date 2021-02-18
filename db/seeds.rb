@@ -39,8 +39,8 @@ s5 = Symptom.create(name: "Fever or feeling feverish (such as chills, sweating)"
 i1 = Illness.create(name: "Positive")
 i2 = Illness.create(name: "Negative")
 i3 = Illness.create(name: "Positive")
-i4 = Illness.create(name: "Negative")
-i4 = Illness.create(name: "Negative")
+i4 = Illness.create(name: "Positive")
+i4 = Illness.create(name: "Positive")
 
 l1 = Location.create(name: "New York")
 l2 = Location.create(name: "San Francisco")
@@ -51,3 +51,7 @@ l5 = Location.create(name: "Los Angeles")
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT
 t1 = Treatment.create(name: "Self care")
+t2 = Treatment.create(name: "") #covid negative so dont need treatment 
+t3 = Treatment.create(name: "Medical care")
+t4 = Treatment.create(name: "Medical care")
+t5 = Treatment.create(name: "Self care")
