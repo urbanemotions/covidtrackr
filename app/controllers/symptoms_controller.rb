@@ -1,5 +1,5 @@
 class SymptomsController < ApplicationController
-    before_action :get_symptom, only: [:show:edit, :update, :destroy]
+    before_action :get_symptom, only: [:show, :edit, :update, :destroy]
     before_action :set_users, only: [:new, :create, :edit, :update]
 
     def new
