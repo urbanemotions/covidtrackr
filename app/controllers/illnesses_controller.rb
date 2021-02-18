@@ -28,7 +28,7 @@ class IllnessesController < ApplicationController
         redirect_to @illness.user
     end
 # i am confusing myself... 
-# when covidsymptoms are selected in the drop down menu, then 
+# when symptoms are selected in the drop down menu, then 
     # def covid?
     #     case x
     #     when @symptom != nil    
@@ -36,7 +36,7 @@ class IllnessesController < ApplicationController
     #     else 
     #         "false"
     #     end
-    #     # if covidsymptom is = covid then illness of covid is true 
+    #     # if symptom is = covid then illness of covid is true 
     #     # come back
     # end
 
