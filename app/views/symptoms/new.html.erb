@@ -15,8 +15,8 @@
         </li>
         <br>
         <li>
-            <%= f.label :symptom %>
-            <%= f.collection_select(:symptom_id, @symptoms, :id, :name) %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
         </li>
         <br>
         <%= f.submit %>
