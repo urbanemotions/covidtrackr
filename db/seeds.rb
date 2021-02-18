@@ -36,18 +36,17 @@ s3 = Symptom.create(name: "New loss of taste or smell")
 s4 = Symptom.create(name: "Vomiting or diarrhea")
 s5 = Symptom.create(name: "Fever or feeling feverish (such as chills, sweating)")
 
-l1 = Location.create(name: "New York")
-l2 = Location.create(name: "San Francisco")
-l3 = Location.create(name: "Seattle")
-l4 = Location.create(name: "Seattle")
-l5 = Location.create(name: "Los Angeles")
-
-# find out how to seed this yes/no, checkbox
 i1 = Illness.create(name: "Covid Positive")
 i2 = Illness.create(name: "Covid Negative")
 i3 = Illness.create(name: "Covid Positive")
 i4 = Illness.create(name: "Covid Negative")
 i4 = Illness.create(name: "Covid Negative")
+
+l1 = Location.create(name: "New York")
+l2 = Location.create(name: "San Francisco")
+l3 = Location.create(name: "Seattle")
+l4 = Location.create(name: "Seattle")
+l5 = Location.create(name: "Los Angeles")
 
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT
