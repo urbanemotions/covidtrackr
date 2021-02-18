@@ -6,8 +6,8 @@ class Treatment < ApplicationRecord
     COVID_TREATMENTS = ["Self care", 
                         "Medical care"]
 
-    validates :covidtreatment, presence: true 
-    validates :covid_treatment, inclusion: {in: COVID_TREATMENTS}
+    validates :name, presence: true 
+    validates :treatment, inclusion: {in: COVID_TREATMENTS}
 
     validates :illness, uniqueness: {scope: :user}
 
