@@ -1,21 +1,18 @@
 class IllnessesController < ApplicationController
 
-
     before_action :find_illness, only: [:show, :destroy]
     
-
     def index
         @illnesses = Illness.all
     end
-    
-    def show 
-        
-    end
-    
+
     def new
         @illness = Illness.new 
     end
-
+    
+    def show   
+    end
+    
     def create 
         @illness = Illness.new(illness_params)
         if @illness.save
@@ -29,8 +26,15 @@ class IllnessesController < ApplicationController
         @illness.destroy 
         redirect_to @illness.user
     end
-
+# i am confusing myself... 
+# when symptoms are selected in the drop down menu, then 
     def covid?
+        case x
+        when @symptom != nil    
+            "true"
+        else 
+            "false"
+        end
         # if symptom is = covid then illness of covid is true 
         # come back
     end

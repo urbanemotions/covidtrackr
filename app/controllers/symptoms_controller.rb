@@ -33,6 +33,10 @@ class SymptomsController < ApplicationController
 
     end
 
+    def index
+        @symptoms = Symptom.all
+    end
+
 
     private
 
