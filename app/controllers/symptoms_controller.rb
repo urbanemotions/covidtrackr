@@ -1,4 +1,5 @@
 class SymptomsController < ApplicationController
+
     before_action :get_symptom, only: [:show, :edit, :update, :destroy]
     before_action :set_users, only: [:new, :create, :edit, :update]
 
@@ -7,7 +8,6 @@ class SymptomsController < ApplicationController
     end
 
     def show 
-
     end
 
     def new
@@ -19,15 +19,14 @@ class SymptomsController < ApplicationController
     def create
         @symptom = Symptom.new(s_params)
         if @symptom.save
-            redirect_to symptom_path(@symptom)
-            #redirect_to @symptom_path
+            #redirect_to symptom_path(@symptom)
+            redirect_to @symptom_path
         else
             render :new 
         end
     end
 
     def edit 
-
     end
 
     def update 
@@ -36,7 +35,6 @@ class SymptomsController < ApplicationController
         else
             render :edit
         end
-
     end
 
     def destroy
