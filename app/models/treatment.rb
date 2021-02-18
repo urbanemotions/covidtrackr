@@ -2,12 +2,12 @@ class Treatment < ApplicationRecord
     
     belongs_to :illness
 
-    COVID_TREATMENTS = ["Self care", 
-                        "Medical care"]
+    # COVID_TREATMENTS = ["Self care", 
+    #                     "Medical care"]
 
-    validates :name, presence: true 
-    validates :ctreatment, inclusion: {in: COVID_TREATMENTS}
+    # validates :name, presence: true 
+    # validates :ctreatment, inclusion: {in: COVID_TREATMENTS}
 
-    validates :illness, uniqueness: {scope: :user}
+    # validates :illness, uniqueness: {scope: :user}
 
 end
