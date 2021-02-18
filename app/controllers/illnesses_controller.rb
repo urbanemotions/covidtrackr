@@ -30,7 +30,7 @@ class IllnessesController < ApplicationController
 # when covidsymptoms are selected in the drop down menu, then 
     def covid?
         case x
-        when @covidsymptom != nil    
+        when @symptom != nil    
             "true"
         else 
             "false"
@@ -41,7 +41,7 @@ class IllnessesController < ApplicationController
 
     private
     def illness_params
-        params.require(:illness).permit(:covid, :user_id, :illness_id)
+        params.require(:illness).permit(:name, :user_id, :illness_id)
     end
 
     def find_illness 
