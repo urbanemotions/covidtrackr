@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     end
 
     def show
-      
     end
     
     def new 
@@ -30,7 +29,6 @@ class UsersController < ApplicationController
     #     redirect_to symptoms_path
     # end
 
-    
     private
 
     def get_user
@@ -40,4 +38,5 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name, :age, :sex)
     end
+    
 end

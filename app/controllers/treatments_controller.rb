@@ -32,6 +32,7 @@ class TreatmentsController < ApplicationController
     end
 
     private 
+    
     def get_treatment
         @treatment = Treatment.find(params[:id])
     end

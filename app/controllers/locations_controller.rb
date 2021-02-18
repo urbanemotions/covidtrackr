@@ -24,7 +24,6 @@ class LocationsController < ApplicationController
     end
 
     def edit    
-
     end
 
     def update 
@@ -50,4 +49,5 @@ class LocationsController < ApplicationController
         params.require(:location).permit(:name, :city, :user_id)
         #params.require(:location).permit(:location)
     end
+    
 end

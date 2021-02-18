@@ -10,8 +10,7 @@ class IllnessesController < ApplicationController
         @illness = Illness.new 
     end
     
-    def show   
-        
+    def show        
     end
     
     def create 
@@ -48,5 +47,5 @@ class IllnessesController < ApplicationController
     def find_illness 
         @illness = Illness.find(params[:id])
     end
-
+    
 end
