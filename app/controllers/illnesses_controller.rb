@@ -1,6 +1,6 @@
 class IllnessesController < ApplicationController
 
-    before_action :find_illness, only: [:show, :destroy]
+    before_action :find_illness, only: [:show, :edit, :update, :destroy]
     
     def index
         @illnesses = Illness.all
@@ -21,7 +21,18 @@ class IllnessesController < ApplicationController
             render :new
         end
     end
-    
+
+    def edit
+    end
+
+    def update
+        if @illness.update(illness_params)
+            redirect_to @illness
+        else
+            render :edit 
+        end
+    end
+
 # if the user input the wrong thing, allow them to delete it
     def destroy 
         @illness.destroy 

@@ -20,8 +20,9 @@
         <br>
     </ul> 
 </h2>
-
+<br>
 <h1> Users have experienced the following symptoms: </h1>
+
 <h2>
     <% @symptoms.each do |s| %>
         <li> <%= link_to s.name, symptom_path(s) %> </li>
