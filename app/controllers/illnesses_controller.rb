@@ -33,7 +33,6 @@ class IllnessesController < ApplicationController
         end
     end
 
-# if the user input the wrong thing, allow them to delete it
     def destroy 
         @illness.destroy 
         redirect_to @illness

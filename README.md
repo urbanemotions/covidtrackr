@@ -1,6 +1,6 @@
 Name: COVIDTRACKR (Rails Project)
 
-Contributors: Irvin Natt (GitHub:) & Sin Wildy (GitHub: urbanemotions)
+Contributors: Irvin Natt (GitHub: ipnatt) & Sin Wildy (GitHub: urbanemotions)
 
 Acknowledgements: Lantz Warrick (Flatiron School - Seattle) & Jasper Reed (Flatiron School - Seattle)
 

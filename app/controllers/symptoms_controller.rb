@@ -19,7 +19,6 @@ class SymptomsController < ApplicationController
     def create
         @symptom = Symptom.new(s_params)
         if @symptom.save
-            #redirect_to symptom_path(@symptom)
             redirect_to @symptom
         else
             render :new 
@@ -49,16 +48,11 @@ class SymptomsController < ApplicationController
     end
 
     def s_params
-        # params.require(:symptom).permit(:name, :covid_symptoms, :user_id, :illness_id)
         params.require(:symptom).permit(:name, :user_id, :illness_id)
     end
 
     def set_users
         @users = User.all 
     end
-
-    # def user_params
-    #     params.require(:user).permit(:user_id, :name, :age, :sex)
-    # end
 
 end
