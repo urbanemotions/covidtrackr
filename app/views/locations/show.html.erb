@@ -1,3 +1,6 @@
 <h1> Location </h1>
 
+<h2> Illness: <%= @location.illness.name %> </h2>
 <h2> City: <%= @location.name %> </h2>
+<%= button_to "Edit Location Info", edit_location_path(@location), method: :get %>
+<%= button_to "Delete this location", location_path(@location), method: :delete  %>

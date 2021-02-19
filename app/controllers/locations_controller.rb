@@ -1,7 +1,6 @@
 class LocationsController < ApplicationController
     
-    #before_action :get_location, only: [:show]
-    #before_action :city_params, only: [:update]
+    before_action :get_location, only: [:show, :edit, :update, :destroy] 
 
     def index
         @locations = Location.all
@@ -9,7 +8,6 @@ class LocationsController < ApplicationController
     end
 
     def show 
-        @location = Location.find(params[:id])
         @illnesses = Illness.all
     end
 

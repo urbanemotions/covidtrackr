@@ -1,9 +1,30 @@
-<h1> Treatments </h1>
+<h1> Treatment Index: </h1>
 
-<h1> 
+<h2>
+    <ul> 
+        <li> Self Care </li>
+            <ul> 
+                <li> Over-the-counter medicines (acetaminophen) </li>
+                <li> Stay home </li>
+            </ul>
+        <br>  
+        <li> Medical Care</li>
+            <ul> 
+                <li> Antiviral drug (remdesivir) </li>
+                <li> Hospitalized </li>
+                <li> Oxygen therapy </li>
+            </ul>
+        <br>
+    </ul> 
+</h2>
+<br>
+
+<h1> Users selected the following treatments </h1>
+
+<h2> 
     <ul>
         <% @treatments.each do |f| %>
             <li> <%= link_to f.name, treatment_path(f) %> </li>
         <% end %>
     </ul>
-</h1>
+</h2>
