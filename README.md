@@ -1,3 +1,5 @@
+Module Two Final Project
+
 Name: COVIDTRACKR (Rails Project)
 
 Contributors: Irvin Natt (GitHub: ipnatt) & Sin Wildy (GitHub: urbanemotions)
@@ -43,4 +45,5 @@ Type 'bundle install'
 Type 'rake db:migrate'
 Type 'rake db:seed'
 Type 'rails s', which will load COVIDTRACKR
+
 Gems: source - "https://rubygems.org"
