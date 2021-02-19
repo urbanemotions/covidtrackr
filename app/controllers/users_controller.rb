@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
     before_action :get_user, only: [:show, :destroy]
-    before_action :user_params, only: [:create]
 
     def index
         @users = User.all 
@@ -24,10 +23,10 @@ class UsersController < ApplicationController
     end
 
     # ability to delete a user - if user changed its mind and realize they dont have any covidsymptoms 
-    # def destroy
-    #     @user.destroy
-    #     redirect_to @user
-    # end
+    def destroy
+        @user.destroy
+        redirect_to user_path
+    end
 
     private
 
