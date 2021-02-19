@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-    # before_action :get_user, only: [:show, :destroy] 
-    # before_action :user_params, only: [:create, :update]
+    # before_action :get_user, only: [:show, :edit, :update, :destroy] 
+    # before_action :user_params, only: [:new, :create, :edit, :update]
 
     def index
         @users = User.all 
@@ -15,12 +15,6 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
-    def edit
-        @users = User.all 
-        @user = User.find(params[:id])
-        
-    end
-
     def create
         @user = User.new(user_params)
         if @user.save
@@ -30,7 +24,13 @@ class UsersController < ApplicationController
         end
     end
 
+    def edit
+        # @users = User.all 
+        @user = User.find(params[:id])
+    end
+
     def update
+        @user = User.find(params[:id])
         if @user.update(user_params)
             redirect_to @user
         else

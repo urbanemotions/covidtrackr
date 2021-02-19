@@ -21,23 +21,12 @@ class IllnessesController < ApplicationController
             render :new
         end
     end
+    
 # if the user input the wrong thing, allow them to delete it
     def destroy 
         @illness.destroy 
         redirect_to @illness
     end
-# i am confusing myself... 
-# when symptoms are selected in the drop down menu, then 
-    # def covid?
-    #     case x
-    #     when @symptom != nil    
-    #         "true"
-    #     else 
-    #         "false"
-    #     end
-    #     # if symptom is = covid then illness of covid is true 
-    #     # come back
-    # end
 
     private
     
