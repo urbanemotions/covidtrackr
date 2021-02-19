@@ -1,19 +1,21 @@
-<h1> Illnesses new page </h1>
+<h1> Illnesses </h1>
 
-<%= form_for @illness do |f| %> 
-    <% if @illness.errors.any? %>
-        <ul>
-            <% @illness.errors.full_messages.each do |msg| %>
-                <li> <%= msg %> </li>
-            <% end %>
+<h2>
+    <%= form_for @illness do |f| %> 
+        <% if @illness.errors.any? %>
+            <ul>
+                <% @illness.errors.full_messages.each do |msg| %>
+                    <li> <%= msg %> </li>
+                <% end %>
+            </ul>
+        <% end %>
+        <ul> 
+            <li>
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+            </li>
+            <br>
+            <%= f.submit %>
         </ul>
     <% end %>
-    <ul> 
-        <li>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-        </li>
-        <br>
-        <%= f.submit %>
-    </ul>
-<% end %>
+</h2>
