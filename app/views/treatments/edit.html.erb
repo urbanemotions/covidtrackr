@@ -1,0 +1,21 @@
+<h1> Edit Treatment Info </h1>
+
+<h2>
+    <%= form_for @treatment do |f| %> 
+        <% if @treatment.errors.any? %>
+            <ul>
+                <% @treatment.errors.full_messages.each do |msg| %>
+                    <li> <%= msg %> </li>
+                <% end %>
+            </ul>
+        <% end %>
+        <ul> 
+            <li>
+                <%= f.label :treatment %>
+                <%= f.text_field :name %>
+            </li>
+            <br>
+            <%= f.submit %>
+        </ul>
+    <% end %>
+</h2>

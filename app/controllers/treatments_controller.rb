@@ -1,12 +1,13 @@
 class TreatmentsController < ApplicationController
 
+    before_action :get_treatment, only: [:show, :edit, :update, :destroy] 
+
     def index
          @treatments = Treatment.all
          @illnesses = Illness.all
     end
 
     def show
-        @treatment = Treatment.find(params[:id])
         @illnesses = Illness.all
     end
 
@@ -33,6 +34,11 @@ class TreatmentsController < ApplicationController
         else
             render :edit 
         end
+    end
+
+    def destroy
+        @treatment.destroy
+        redirect_to treatments_path
     end
 
     private 
