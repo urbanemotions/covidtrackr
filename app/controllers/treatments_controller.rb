@@ -9,6 +9,8 @@ class TreatmentsController < ApplicationController
 
     def new
         @treatment = Treatment.new
+        # @treatments = [{name: “Self care”}, {name: “medical care”}]
+        @illnesses = Illness.all
     end
 
     def create 

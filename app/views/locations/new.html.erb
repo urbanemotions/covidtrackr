@@ -1,6 +1,6 @@
 <h1> Locations visited </h1>
 
-<h1> 
+<h2> 
     <%= form_for @location do |f| %> 
         <% if @location.errors.any? %>
             <ul>
@@ -9,7 +9,12 @@
                 <% end %>
             </ul>
         <% end %>
-        <ul> 
+        <ul>
+            <li>
+                <%= f.label :illness %>
+                <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
+            </li>
+            <br> 
             <li>
                 <%= f.label :name %>
                 <%= f.text_field :name %>
@@ -18,4 +23,4 @@
             <%= f.submit %>
         </ul>
     <% end %>
-</h1>
+</h2>

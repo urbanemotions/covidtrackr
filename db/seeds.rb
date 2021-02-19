@@ -46,11 +46,11 @@ s3 = Symptom.create(name: "New loss of taste or smell", user_id: u3.id, illness_
 s4 = Symptom.create(name: "Vomiting or diarrhea", user_id: u4.id, illness_id: i4.id)
 s5 = Symptom.create(name: "Fever or feeling feverish (such as chills, sweating)", user_id: u5.id, illness_id: i5.id)
 
-l1 = Location.create(name: "New York")
-l2 = Location.create(name: "San Francisco")
-l3 = Location.create(name: "Seattle")
-l4 = Location.create(name: "Seattle")
-l5 = Location.create(name: "Miami")
+l1 = Location.create(name: "New York", illness_id: i1.id)
+l2 = Location.create(name: "San Francisco", illness_id: i2.id)
+l3 = Location.create(name: "Seattle", illness_id: i3.id)
+l4 = Location.create(name: "Seattle", illness_id: i4.id)
+l5 = Location.create(name: "Miami", illness_id: i5.id)
 
 # HOW TO SELECT SELF CARE, 
 # WHICH THEN ALLOWS USER TO SELECT THE TYPE OF SELF CARE TREATMENT

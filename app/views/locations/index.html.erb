@@ -1,6 +1,9 @@
-<h1> User has being to the following locations: </h1>
-<h1>
-    <% @locations.each do |f| %>
-        <li> <%= link_to f.location, location_path(f) %> </li>
-    <% end %>
-</h1>
+<h1> Covid positive users have being to the following locations: </h1>
+
+<h2>
+    <ul>
+        <% @locations.each do |f| %>
+            <li> <%= link_to f.name, location_path(f) %> </li>
+        <% end %>
+    </ul>
+</h2>

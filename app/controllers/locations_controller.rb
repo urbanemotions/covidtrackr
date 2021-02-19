@@ -5,13 +5,17 @@ class LocationsController < ApplicationController
 
     def index
         @locations = Location.all
+        @illnesses = Illness.all
     end
 
     def show 
+        @location = Location.find(params[:id])
+        @illnesses = Illness.all
     end
 
     def new
         @location = Location.new 
+        @illnesses = Illness.all
     end
 
     def create

@@ -10,13 +10,13 @@
     <% end %>
     <ul> 
         <li>
-            <%= f.label :user %>
-            <%= f.collection_select(:user_id, @users, :id, :name) %>
+            <%= f.label :illness %>
+            <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
         </li>
         <br>
         <li>
             <%= f.label :treatment %>
-            <%= f.collection_select(:treatment_id, @treatments) %>
+            <%= f.collection_select(:name, @treatments, :name, :name) %>
         </li>
         <br>
         <%= f.submit %>
