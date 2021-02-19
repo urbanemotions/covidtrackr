@@ -12,14 +12,14 @@ class TreatmentsController < ApplicationController
 
     def new
         @treatment = Treatment.new
-        # @treatments = [{name: “Self care”}, {name: “medical care”}]
         @illnesses = Illness.all
     end
 
     def create 
         @treatment = Treatment.new(t_params)
+        # @treatment = Treatment.new
         if @treatment.save
-            redirect_to @treatment
+            redirect_to @treatment  
         else
             render :new
         end

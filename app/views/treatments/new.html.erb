@@ -11,12 +11,23 @@
     <ul> 
         <li>
             <%= f.label :illness %>
-            <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
+            <%= f.collection_select(:illness_id, @illnesses, :id, :name) %> 
         </li>
         <br>
         <li>
-            <%= f.label :treatment %>
-            <%= f.collection_select(:name, @treatments, :name, :name) %>
+            <label>Please choose treatment:
+            <select name="choose treatment" multiple size="7">
+            <optgroup label="Self Care">
+            <option value="Over-the-counter medicines (acetaminophen)">Over-the-counter medicines (acetaminophen)</option>
+            <option value="Stay home">Stay home</option>
+            </optgroup>
+            <optgroup label="Medical Care">
+            <option value="Antiviral drug (remdesivir)">Antiviral drug (remdesivir)/option>
+            <option value="Hospitalized">Hospitalized</option>
+            <option value="Oxygen therapy">Oxygen therapy</option>
+            </optgroup>
+            </select>
+            </label>
         </li>
         <br>
         <%= f.submit %>
