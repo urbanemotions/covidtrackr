@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-    # before_action :get_user, only: [:show, :destroy]
+    # before_action :get_user, only: [:show, :destroy] 
+    # before_action :user_params, only: [:create, :update]
 
     def index
         @users = User.all 
@@ -15,6 +16,9 @@ class UsersController < ApplicationController
     end
 
     def edit
+        @users = User.all 
+        @user = User.find(params[:id])
+        
     end
 
     def create

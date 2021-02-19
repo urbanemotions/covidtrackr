@@ -17,7 +17,6 @@ class TreatmentsController < ApplicationController
 
     def create 
         @treatment = Treatment.new(t_params)
-        # @treatment = Treatment.new
         if @treatment.save
             redirect_to @treatment  
         else
