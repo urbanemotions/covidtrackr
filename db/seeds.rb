@@ -1,4 +1,8 @@
 User.destroy_all
+Illness.destroy_all
+Symptom.destroy_all
+Location.destroy_all
+Treatment.destroy_all
 
 # COVID_SYMPTOMS = ["Fever or feeling feverish (such as chills, sweating)", 
 #                   "Cough", 
@@ -30,11 +34,11 @@ u3 = User.create(name: "Jean", age: 42, sex: "M")
 u4 = User.create(name: "Deirdre", age: 35, sex: "F")
 u5 = User.create(name: "Bri", age: 36, sex: "M")
 
-i1 = Illness.create(name: "Positive")
-i2 = Illness.create(name: "Negative")
-i3 = Illness.create(name: "Positive")
-i4 = Illness.create(name: "Positive")
-i5 = Illness.create(name: "Positive")
+i1 = Illness.create(name: "Covid Positive")
+i2 = Illness.create(name: "Covid Negative")
+i3 = Illness.create(name: "Covid Positive")
+i4 = Illness.create(name: "Covid Positive")
+i5 = Illness.create(name: "Covid Positive")
 
 s1 = Symptom.create(name: "Cough", user_id: u1.id, illness_id: i1.id)
 s2 = Symptom.create(name: "Sore throat", user_id: u2.id, illness_id: i2.id)

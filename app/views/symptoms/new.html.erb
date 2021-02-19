@@ -1,25 +1,31 @@
 <h1> Symptoms </h1>
-<h1>
-<%= form_for @symptom do |f| %> 
-    <% if @symptom.errors.any? %>
-        <ul>
-            <% @symptom.errors.full_messages.each do |msg| %>
-                <li> <%= msg %> </li>
-            <% end %>
+
+<h2>
+    <%= form_for @symptom do |f| %> 
+        <% if @symptom.errors.any? %>
+            <ul>
+                <% @symptom.errors.full_messages.each do |msg| %>
+                    <li> <%= msg %> </li>
+                <% end %>
+            </ul>
+        <% end %>
+        <ul> 
+            <li>
+                <%= f.label :user %>
+                <%= f.collection_select(:user_id, @users, :id, :name) %>
+            </li>
+            <br>
+            <li>
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+            </li>
+            <br>
+            <li>
+                <%= f.label :illness %>
+                <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
+            </li>
+            <br>
+            <%= f.submit %>
         </ul>
     <% end %>
-    <ul> 
-        <li>
-            <%= f.label :user %>
-            <%= f.collection_select(:user_id, @users, :id, :name) %>
-        </li>
-        <br>
-        <li>
-            <%= f.label :illness %>
-            <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
-        </li>
-        <br>
-        <%= f.submit %>
-    </ul>
-<% end %>
-</h1> 
+</h2> 
