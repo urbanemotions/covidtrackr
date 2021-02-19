@@ -1,5 +1,5 @@
 <h1> Treatments </h1>
-<h1>
+<h2>
 <%= form_for @treatment do |f| %> 
     <% if @treatment.errors.any? %>
         <ul>
@@ -22,7 +22,7 @@
             <option value="Stay home">Stay home</option>
             </optgroup>
             <optgroup label="Medical Care">
-            <option value="Antiviral drug (remdesivir)">Antiviral drug (remdesivir)/option>
+            <option value="Antiviral drug (remdesivir)">Antiviral drug (remdesivir)</option>
             <option value="Hospitalized">Hospitalized</option>
             <option value="Oxygen therapy">Oxygen therapy</option>
             </optgroup>
@@ -33,4 +33,4 @@
         <%= f.submit %>
     </ul>
 <% end %>
-</h1> 
+</h2> 
