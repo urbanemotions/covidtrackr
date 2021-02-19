@@ -19,7 +19,7 @@ class TreatmentsController < ApplicationController
     def create 
         @treatment = Treatment.new(t_params)
         if @treatment.save
-            redirect_to @treatments_path  
+            redirect_to treatments_path
         else
             render :new
         end

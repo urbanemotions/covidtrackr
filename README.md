@@ -16,23 +16,23 @@ Goals:
 * As a user, I want to be able to edit the patient symptoms information
 * As a user, I want to be able to delete a patient symptoms record
 
-* As a user, I want to be able to add illnesses that I am currently experiencing
+* As a user, I want to be able to add illnesses that the patient is currently experiencing
 * As a user, I want to be able to view the illnesses index 
-* As a user, I want to be able to retrieve a list of illnesses the current users are experiencing
-* As a user, I want to be able to edit my illness information
-* As a user, I want to be able to delete my illness record
+* As a user, I want to be able to retrieve a list of illnesses the current patient is experiencing
+* As a user, I want to be able to edit the patient illnesses information
+* As a user, I want to be able to delete a patient illnesses record
 
-* As a user, I want to be able to add locations that I have visited in the last 2 weeks
+* As a user, I want to be able to add locations that the patient visited recently
 * As a user, I want to be able to view the locations index 
-* As a user, I want to be able to retrieve a list of locations 
-* As a user, I want to be able to edit my location information
-* As a user, I want to be able to delete my location record
+* As a user, I want to be able to retrieve a list of locations the patients visited
+* As a user, I want to be able to edit the patient locations information
+* As a user, I want to be able to delete a patient locations record
 
-* As a user, I want to be able to select my treatment
+* As a user, I want to be able to select the treatment for the patient
 * As a user, I want to be able to view the treatments options 
-* As a user, I want to be able to retrieve a list of treatments 
-* As a user, I want to be able to edit my treatment information
-* As a user, I want to be able to delete my treatment record
+* As a user, I want to be able to retrieve a list of the patient treatments
+* As a user, I want to be able to edit the patient treatments information
+* As a user, I want to be able to delete a patient treatments record
 
 Installation instructions:
 
