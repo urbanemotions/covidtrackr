@@ -51,7 +51,7 @@ class LocationsController < ApplicationController
 
     def city_params 
         params.require(:location).permit(:name, :illness_id)
-        # params.require(:location).permit(:name, :city, :user_id)
+        #params.require(:location).permit(:name, :city, :user_id)
     end
     
 end
