@@ -1,7 +1,9 @@
 <h1> Treatments </h1>
 
 <h1> 
-    <% @treatments.each do |f| %>
-        <li> <%= link_to f.name, treatment_path(f) %> </li>
-    <% end %>
+    <ul>
+        <% @treatments.each do |f| %>
+            <li> <%= link_to f.name, treatment_path(f) %> </li>
+        <% end %>
+    </ul>
 </h1>

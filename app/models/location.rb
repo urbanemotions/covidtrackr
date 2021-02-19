@@ -8,7 +8,7 @@ class Location < ApplicationRecord
     #         "Los Angeles", 
     #         "Miami"]
     
-    # validates :name, presence: true 
+    validates :name, presence: true 
     # validates :city, inclusion: {in: CITY}
     
 end

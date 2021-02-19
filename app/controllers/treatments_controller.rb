@@ -2,9 +2,12 @@ class TreatmentsController < ApplicationController
 
     def index
          @treatments = Treatment.all
+         @illnesses = Illness.all
     end
 
     def show
+        @treatment = Treatment.find(params[:id])
+        @illnesses = Illness.all
     end
 
     def new
