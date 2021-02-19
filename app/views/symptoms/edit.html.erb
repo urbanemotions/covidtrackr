@@ -1,4 +1,4 @@
-<h1> Symptoms </h1>
+<h1> Edit Symptoms </h1>
 
 <h2>
     <%= form_for @symptom do |f| %> 
@@ -11,21 +11,11 @@
         <% end %>
         <ul> 
             <li>
-                <%= f.label :user %>
-                <%= f.collection_select(:user_id, @users, :id, :name) %>
-            </li>
-            <br>
-            <li>
                 <%= f.label :symptom %>
                 <%= f.text_field :name %>
-            </li>
-            <br>
-            <li>
-                <%= f.label :illness %>
-                <%= f.collection_select(:illness_id, @illnesses, :id, :name) %>
             </li>
             <br>
             <%= f.submit %>
         </ul>
     <% end %>
-</h2> 
+</h2>

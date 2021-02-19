@@ -1,4 +1,9 @@
 <h1> User has the following symptoms </h1>
 
+<h2> User: <%= @symptom.user.name %> </h2>
+<h2> Illness: <%= @symptom.illness.name %> </h2>
 <h2> Symptoms: <%= @symptom.name %> </h2>
+
+<%= button_to "Edit Symptoms Info", edit_symptom_path(@symptom), method: :get %>
+<%= button_to "Delete this symptom", symptom_path(@symptom), method: :delete  %>
 

@@ -39,7 +39,7 @@ class SymptomsController < ApplicationController
 
     def destroy
         @symptom.destroy
-        redirect_to symptom_path
+        redirect_to symptoms_path
     end
 
     private
