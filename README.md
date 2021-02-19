@@ -39,11 +39,11 @@ Goals:
 Installation instructions:
 
 In your terminal:-
-Clone the repository:- https://github.com/urbanemotions/covidtrackr/
-cd into the directory
-Type 'bundle install'
-Type 'rake db:migrate'
-Type 'rake db:seed'
-Type 'rails s', which will load COVIDTRACKR
+* Clone the repository:- https://github.com/urbanemotions/covidtrackr/
+* cd into the directory
+* Type 'bundle install'
+* Type 'rake db:migrate'
+* Type 'rake db:seed'
+* Type 'rails s', which will load COVIDTRACKR
 
 Gems: source - "https://rubygems.org"
